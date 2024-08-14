@@ -161,7 +161,7 @@ p{\n\
   text-align: center;\n\
 }\n\
 button{\n\
-  background-color: cyan;\n\
+  background-color: white;\n\
   font-size: 80px;\n\
   width: 110px;\n\
   height: 110px;\n\
@@ -286,13 +286,13 @@ window.onload=function(){\n\
     xhttp.send();\n\
   });\n\
   upbutton.addEventListener('touchend', function() {\n\
-    upbutton.style.backgroundColor = 'aqua';\n\
+    downbutton.style.backgroundColor = '';\n\
     var xhttp = new XMLHttpRequest();\n\
     xhttp.open('GET','/upButtonOff',true);\n\
     xhttp.send();\n\
   });\n\
   upbutton.addEventListener('touchcancel', function() {\n\
-    upbutton.style.backgroundColor = 'aqua';\n\
+    downbutton.style.backgroundColor = '';\n\
     var xhttp = new XMLHttpRequest();\n\
     xhttp.open('GET','/upButtonOff',true);\n\
     xhttp.send();\n\
@@ -361,7 +361,7 @@ String index(){
         <div class='secondRow'>\
             <div class='batteryBox'>\
                 <h3>Sıcaklık:</h3>\
-                <h3>%" + tempC + "</h3>\
+                <h3>" + tempC + " °C</h3>\
             </div>\
             <div class='mainBox'>\
                 <h2>Ana Şalter</h2>\
@@ -415,6 +415,7 @@ String index(){
                 </div>\
             </div>\
         </div>\
+        <div style = \"text-align: center; \"><p>Developed by Halilcan DEMİR</p></div>\
     </body></html>";
 }
 void refresh(){
